@@ -7,8 +7,11 @@ Student: Ankit Uttarakar
 SRN: PES2UG24CS070
 Course / Section: 5B (CSE) - Software Engineering Lab 5
 
-Original Repository:
+Original Faculty Repository:
 https://github.com/SETAPESU26/L5_07_campus_shuttle.git
+
+Student Fork Repository (Submitted Work):
+https://github.com/ankituttarakar/L5_07_campus_shuttle.git
 
 Deliverables Included in Lab5_Final_Submission:
 - shuttle_system.py         : Remediated campus shuttle program
