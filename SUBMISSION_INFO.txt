@@ -1,0 +1,56 @@
+================================================================================
+SOFTWARE ENGINEERING LAB 5: STATIC CODE ANALYSIS
+Campus Shuttle Timetable & Fleet Tracker
+================================================================================
+
+Student: Ankit Uttarakar
+SRN: PES2UG24CS070
+Course / Section: 5B (CSE) - Software Engineering Lab 5
+
+Original Repository:
+https://github.com/SETAPESU26/L5_07_campus_shuttle.git
+
+Deliverables Included in Lab5_Final_Submission:
+- shuttle_system.py         : Remediated campus shuttle program
+- issues.md                 : Comprehensive table of identified issues & fix approaches
+- reflection.md             : Answers to lab reflection questions
+- README.md                 : Lab documentation and execution guide
+- requirements.txt          : Minimal dependencies (pylint, flake8, bandit)
+- fleet.json                : Clean, valid initial fleet starter data
+- Lab5_Static_Analysis_Results.pdf : Official PDF with labeled tool screenshots (Pylint, Flake8, Bandit, Tests)
+- reports/before/           : Baseline static analysis reports
+    - pylint_report.txt     (Score: 6.25/10)
+    - flake8_report.txt     (10 violations)
+    - bandit_report.txt     (2 Low severity findings)
+- reports/after/            : Post-remediation static analysis reports
+    - pylint_report.txt     (Score: 10.00/10)
+    - flake8_report.txt     (0 violations, 100% clean)
+    - bandit_report.txt     (0 issues identified)
+- reports/summary.md        : Before/After comparative assessment report
+- tests/                    : Automated unit test suite
+    - test_shuttle_system.py (13 passing test cases)
+
+Static Analysis Tool Verification:
+- Pylint Baseline Score     : 6.25 / 10
+- Pylint Final Score        : 10.00 / 10 (+3.75 improvement)
+- Flake8 Final Violations   : 0 violations
+- Bandit Final Issues       : 0 issues (0 Low, 0 Medium, 0 High)
+
+Automated Test Results:
+- Total Tests Executed      : 13
+- Passed                    : 13
+- Failures                  : 0
+- Errors                    : 0
+- Test Suite Status         : OK (100% pass rate)
+
+Functional & Security Hardening Summary:
+1. Eliminated runtime crashes on route removal and unknown user route lookups.
+2. Prevented ZeroDivisionError on routes with zero recorded trips.
+3. Added strict type and non-negative bounds validation for passenger counts.
+4. Replaced dangerous mutable default argument (logs=[]) with logs=None.
+5. Removed bare except: pass anti-pattern.
+6. Implemented safe file context managers with explicit UTF-8 encoding.
+7. Path independence using pathlib.Path relative to script root.
+8. Applied secure driver selection using standard library secrets.choice.
+9. Guarded module execution behind if __name__ == '__main__':.
+================================================================================
